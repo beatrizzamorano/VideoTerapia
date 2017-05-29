@@ -1,18 +1,15 @@
 <div layout-align="center" layout="row" >
-    <md-whiteframe class="md-whiteframe-2dp" flex="50" layout="column" layout-fill layout-align="center center" >
+    <md-whiteframe class="md-whiteframe-2dp" flex="90" layout="column" layout-fill layout-align="center center" >
     
         <h1>{{ bodySection }}</h1>
-        <div layout="crow">
-            <md-card ng-repeat="bodyPart in bodyParts">
+        <div layout="row" layout-wrap layout-align="space-around stretch">
+            <md-card ng-repeat="bodyPart in bodyParts" flex="25" style="margin-bottom: 40px">
                 <md-card-header>
                     <md-card-header-text>
-                        <span class="md-title">{{ ::bodyPart.name }}</span>
+                        <span class="md-title" style="text-align: center">{{ ::bodyPart.name }}</span>
                     </md-card-header-text>
                 </md-card-header>
-                <md-card-title>
-                    <md-card-title-text>
-                       <!--Descripcion-->
-                    </md-card-title-text>
+                <md-card-title layout-align="center">
                     <md-card-title-media>  
                         <a ng-href="{{bodyPart.link}}">
                         <img class="md-media-lg card-media" ng-if="bodyPart.imgUrl" ng-src="{{ bodyPart.imgUrl }}" height="250px" width="450px">
