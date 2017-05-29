@@ -28,10 +28,10 @@ angular.module('videoTerapia',
     function selectCards() {
         switch ($routeParams.bodySection.toLowerCase()) {
             case 'brazos': return [
-                { name: 'Codos', imgUrl: '',  link:'', description:''},
-                { name: 'Muñeca', imgUrl:'', link:'', description:'' },
-                { name: 'Antebrazo', imgUrl:'', link:'', description:'' },
-                { name: 'Abdomen', imgUrl:'', link:'', description:'' },
+                { name: 'Hombro', imgUrl: 'http://www.muscle-corps.de/portal/wp-content/uploads/2010/04/18071289_m.jpg',  link:'https://www.fisioterapia-online.com/sites/default/files/infografias/161.jpg', description:'Los músculos de esta articulación, además de permitir la realización de los movimientos, estabilizan la articulación, es por esto, que para cuidar nuestro hombro y evitar sufrir posibles luxaciones, es necesario que los mantengamos sanos y fortalecidos.'},
+                { name: 'Tricep', imgUrl:'http://comps.canstockphoto.com/can-stock-photo_csp13091076.jpg', link:'https://www.fisioterapia-online.com/sites/default/files/infografias/ejercicios_tonificacion_de_hombro_con_mancuernas.png', description:'Después de una lesión de hombro, como por ejemplo una lesión del manguito rotador, puede ser necesario un periodo de tonificación en la fase final de la rehabilitación, en otros casos quizás sea necesario realizar ejercicio en una musculatura débil para evitar lesiones, en estos casos realizar una rutina de tonificación con mancuernas puede ser ideal.' },
+                { name: 'Bicep', imgUrl:'http://comps.canstockphoto.es/can-stock-photo_csp13091071.jpg', link:'https://www.fisioterapia-online.com/sites/default/files/infografias/estiramientos_de_hombro.png', description:'El estiramineto  tanto del pectoral y bíceps como de toda la cadena anterior del brazo son importantísimos ya que tienden a estar acortados y por su continuo trabajo y su función principal en las funciones hegemónicas  del ser humano. ' },
+                { name: 'Antebrazo', imgUrl:'http://arthroscopie-membre-superieur.eu/sites/default/files/epicondylite_1_douleur.jpg', link:'https://www.fisioterapia-online.com/sites/default/files/infografias/ejercicios_con_theraband_para_brazo_y_hombro.jpg', description:'El entrenamiento de la fuerza con bandas elásticas se viene utilizando desde hace tiempo y tiene algunas ventajas, por ejemplo mantiene un cierto grado de resistencia independientemente de la posición con respecto de la gravedad. Hay que tener en cuenta que la resistencia irá aumentando con la tensión de la goma.' },
                 { name: 'Abdomen', imgUrl:'', link:'', description:'' },
                 { name: 'Abdomen', imgUrl:'', link:'', description:'' },
                 { name: 'Abdomen', imgUrl:'', link:'', description:'' }
