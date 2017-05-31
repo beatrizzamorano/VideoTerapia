@@ -2,6 +2,7 @@ angular.module('videoTerapia',
 [
     'ngMaterial',
     'ngRoute',
+    'youtube-embed'
 ])
 .config(function($routeProvider) {
     $routeProvider
@@ -16,18 +17,23 @@ angular.module('videoTerapia',
             redirectTo: '/'
         });
 })
+
 .controller('MainController', function($scope, $mdSidenav) {
     $scope.toggleSidenav = function() {
         $mdSidenav('sidenav').toggle();
     }
+     
 })
 .controller('BodySectionIndexController', function($scope, $routeParams, $location) {
     $scope.bodySection = $routeParams.bodySection[0].toUpperCase() + $routeParams.bodySection.slice(1);
     $scope.bodyParts = selectCards();
 
+   
     function selectCards() {
         switch ($routeParams.bodySection.toLowerCase()) {
             case 'brazos': return [
+                { name: 'whatever', height: '360', width: '640',vdId:"sMKoNBRZM1M"},
+                { name: 'what', vdId:"6Z31EvIJtZc"},
                 { name: 'Hombro', imgUrl: 'http://www.muscle-corps.de/portal/wp-content/uploads/2010/04/18071289_m.jpg',  link:'https://www.fisioterapia-online.com/sites/default/files/infografias/161.jpg', description:'Los músculos de esta articulación, además de permitir la realización de los movimientos, estabilizan la articulación, es por esto, que para cuidar nuestro hombro y evitar sufrir posibles luxaciones, es necesario que los mantengamos sanos y fortalecidos.'},
                 { name: 'Tricep', imgUrl:'http://comps.canstockphoto.com/can-stock-photo_csp13091076.jpg', link:'https://www.fisioterapia-online.com/sites/default/files/infografias/ejercicios_tonificacion_de_hombro_con_mancuernas.png', description:'Después de una lesión de hombro, como por ejemplo una lesión del manguito rotador, puede ser necesario un periodo de tonificación en la fase final de la rehabilitación, en otros casos quizás sea necesario realizar ejercicio en una musculatura débil para evitar lesiones, en estos casos realizar una rutina de tonificación con mancuernas puede ser ideal.' },
                 { name: 'Bicep', imgUrl:'http://comps.canstockphoto.es/can-stock-photo_csp13091071.jpg', link:'https://www.fisioterapia-online.com/sites/default/files/infografias/estiramientos_de_hombro.png', description:'El estiramineto  tanto del pectoral y bíceps como de toda la cadena anterior del brazo son importantísimos ya que tienden a estar acortados y por su continuo trabajo y su función principal en las funciones hegemónicas  del ser humano. ' },
@@ -54,3 +60,4 @@ angular.module('videoTerapia',
         }
     }
 });
+
